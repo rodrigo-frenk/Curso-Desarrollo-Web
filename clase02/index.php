@@ -1,43 +1,61 @@
 <?php 
 
 
-		// ejemplo de generación dinámica de HTML
-		// a partir de una "base de datos"
-		// utilizando PHP
+	// ejemplo de generación dinámica de HTML
+	// a partir de una "base de datos"
+	// utilizando PHP
 
-$arreglo = array(
-	"Andrea"=>"email@email.com",
-	"Viviana"=>"email@email.com",
-	"Adalberto"=>"email@email.com",
-	"Rebeca"=>"email@email.com",
-	"Mariana"=>"email@email.com",
-	"Karen"=>"email@email.com",
-	"Susana" => "email@email.com",
-	"Rodrigo" => "email@email.com"
+	// utilización de un arreglo para almacenar información
+
+	$personas = array(
+		array( "nombre" => "Andrea", "email" => "email@email.com" ),
+		array( "nombre" => "Viviana", "email" => "email@email.com" ),
+		array( "nombre" => "Adalberto", "email" => "email@email.com" ),
+		array( "nombre" => "Rebeca", "email" => "email@email.com" ),
+		array( "nombre" => "Mariana", "email" => "email@email.com" ),
+		array( "nombre" => "Karen", "email" => "email@email.com" ),
+		array( "nombre" => "Susana" , "email" =>  "email@email.com" ),
+		array( "nombre" => "Rodrigo" , "email" =>  "email@email.com" )
 	);
 
 
-		// no intercalar VS. intercalar 
 
-		// intercalar
 echo "<h2>";
-echo "Total personas: " . count($arreglo);
+	echo "Total personas: " . count( $personas ); // 'count' nos entrega el número de elementos del arreglo
 echo "</h2>";
 
-?>
+
+// mostrar primera persona:
+
+// eligir la primera persona, contando desde 0
+$primera_persona = $personas[ 0 ];
+
+// obtener su nombre
+$nombre = $primera_persona["nombre"];
+
+echo "<h4>";
+
+	echo "Primera persona: ";
+	echo $nombre;
+echo "</h4>";
 
 
-<!-- no intercalar -->
-<h2>
-	<?php 
-	echo "Total personas: " . count($arreglo);
-	?>
-</h2>
 
-<?php
+// Mostrar todas las personas:
 
+// contar de 0 a 8 (el número total de personas)
 
-foreach ($arreglo as $nombre => $email) {
+for( $i=0; $i < count($personas); $i++ ) {
+	
+	// obtener datos del arreglo:
+
+	// seleccionar una persona a la vez
+	$persona = $personas[ $i ];
+	// obtener su nombre
+	$nombre = $persona["nombre"];
+	// obtener su email
+	$email = $persona["email"];
+
 	?>
 
 	<li>
@@ -57,4 +75,3 @@ foreach ($arreglo as $nombre => $email) {
 
 
 ?>
-
