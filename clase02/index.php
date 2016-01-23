@@ -1,76 +1,125 @@
 <?php 
 
 
-	// ejemplo de generación dinámica de HTML
-	// a partir de una "base de datos"
-	// utilizando PHP
+// Introducción a PHP
 
-	// utilización de un arreglo para almacenar información
+// variables
 
-	$personas = array(
-		array( "nombre" => "Andrea", "email" => "email@email.com" ),
-		array( "nombre" => "Viviana", "email" => "email@email.com" ),
-		array( "nombre" => "Adalberto", "email" => "email@email.com" ),
-		array( "nombre" => "Rebeca", "email" => "email@email.com" ),
-		array( "nombre" => "Mariana", "email" => "email@email.com" ),
-		array( "nombre" => "Karen", "email" => "email@email.com" ),
-		array( "nombre" => "Susana" , "email" =>  "email@email.com" ),
-		array( "nombre" => "Rodrigo" , "email" =>  "email@email.com" )
-	);
+$un_numero = 3;
+
+$otro_numero = 4;
+
+// operador de suma:
+
+$suma = $un_numero + $otro_numero;
 
 
 
-echo "<h2>";
-	echo "Total personas: " . count( $personas ); // 'count' nos entrega el número de elementos del arreglo
-echo "</h2>";
+// Presentación / Vista para el usuario:
+
+// operador de concatenación "."
+// Sirve para añadir más texto (caracteres) a una variable
+
+$texto = "Primer Numero: " . $un_numero;
+
+// Podemos seguir añadiendo texto a una variable:
+
+$texto = $texto . "<br/>";
+
+// Lo anterior, se puede abreviar con el siguiente operador ".=" :
+
+$texto .= "<br/>";
+
+$texto .= " Segundo numero: " . $otro_numero;
+
+$texto .= "<br/>";
+$texto .= " Resultado: " . $suma;
+
+$texto .= "<br/>";
 
 
-// mostrar primera persona:
 
-// eligir la primera persona, contando desde 0
-$primera_persona = $personas[ 0 ];
-
-// obtener su nombre
-$nombre = $primera_persona["nombre"];
-
-echo "<h4>";
-
-	echo "Primera persona: ";
-	echo $nombre;
-echo "</h4>";
+echo $texto;
 
 
 
-// Mostrar todas las personas:
+// Estructura de control
+// Podemos evaluar una condición ( revisar si la súma es mayor que 0 )
 
-// contar de 0 a 8 (el número total de personas)
+if( $suma > 0 ) {
 
-for( $i=0; $i < count($personas); $i++ ) {
-	
-	// obtener datos del arreglo:
+	// Si es mayor que 0, ejecutar este bloque de código
+	echo "Resultado es positivo";
 
-	// seleccionar una persona a la vez
-	$persona = $personas[ $i ];
-	// obtener su nombre
-	$nombre = $persona["nombre"];
-	// obtener su email
-	$email = $persona["email"];
+} else {
+	// De otro modo, ejecutar éste:
+	echo "Resultado es negativo";
 
-	?>
-
-	<li>
-		<h5>
-			<?php echo $nombre; ?>
-		</h5>
-		<div class="email">
-			<a href="mailto:<?php echo $email; ?>">
-				<?php echo $email; ?>
-			</a>
-		</div>
-	</li>
-
-	<?php
 }
+							// operadores de comparacion
+							// > mayor que
+							// > menor que
+							// >= mayor o igual que
+							// <= menor o igual que
+							// == igual que
+							// != diferente que 
+
+
+
+// 3. Funciones 
+
+/*
+
+Podemos declarar funciones, algo así como acciones que podemos "enseñarle"
+a la computadora para que las ejecute cada que las necesitamos.
+
+Sintaxis:
+
+1. La palabra function indica que vamos a declarar una palabra como nombre
+de una nueva funcion
+
+2. Los paréntesis "()" sirven para pasar datos a la función. Ver más adelante.
+
+3. Las llaves "{}" abren un espacio dentro del cual nosotros podemos ejecutar código.
+
+*/
+
+function saluda() {
+	echo "</br>";
+	echo "Hola";
+}
+function despide() {
+	echo "</br>";
+	echo "Adios";
+	echo "</br>";
+}
+
+
+// Después de declarar las funciones, podemos mandarlas llamar:
+
+saluda();
+
+despide();
+
+// Función a la que se pasan datos (o argumentos, también llamados parámetros)
+function suma_numeros( $a, $b ) {
+	return $a + $b;
+}
+
+echo suma_numeros( 100, 50 );
+
+echo '<br/>';
+
+echo suma_numeros( 1, 9 );
+
+echo '<br/>';
+
+// reutilizando funciones dentro de funciones
+echo suma_numeros( suma_numeros( 1, 9 ), suma_numeros( 3, 2 ) );
+echo '<br/>';
+
+
+
 
 
 

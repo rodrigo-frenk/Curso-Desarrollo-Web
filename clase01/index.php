@@ -5,6 +5,14 @@
 
 	<body>
 
+
+<!-- LLaves para abrir y cerrar bloques de PHP: -->
+
+<?php // ESTO ES PHP ?>
+
+
+
+
 <?php
 	// PHP básico.
 	
@@ -18,6 +26,7 @@
 	// Sirven para explicar nuestro código
 	// o dejar mensajes a nosotros mismos u otras personas
 
+
 	/*
 	Este es un comentario multi-línea
 	Abarca todo el texto comprendido
@@ -25,13 +34,13 @@
 	*/
 
 
-	// 1. Mostrando contenido en la pantalla:
+	// 1. Escribiendo contenido en el documento HTML
 	
 	// La función "echo": muestra contenido en la pantalla:
 	
-	echo "Hola";
-	
-	echo 1+1;
+		echo "Hola";
+		
+		echo 1+1;
 
 
 	/*
@@ -118,6 +127,8 @@
 	$mi_variable = date('D-d-M-Y'); // un objeto que arroja la fecha de hoy en un formato legible.
 	echo $mi_variable;
 	echo '<br/>'; // line break para mostrar variable en una sóla línea.
+	
+
 	
 	?>
 
