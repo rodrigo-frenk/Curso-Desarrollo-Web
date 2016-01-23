@@ -1,0 +1,60 @@
+<!-- DOCTYPE HTML -->
+<html>
+<head>
+	<title>Clase CSS y Javascript</title>
+	<meta charset="utf-8">
+	
+	<style>
+
+		body {
+			padding: 0;
+			margin: 0;
+		}
+		#area_de_trabajo {
+			width:100%;
+			height: 100%;
+			margin: 0;
+			padding: 0;
+			padding-top: 300px;
+			text-align: center;
+		}
+		
+		button,
+		#area_de_trabajo {
+			transition: all 2s ease-in-out;
+		}
+
+		.fondo_rojo {
+			background-color: red;
+		}
+
+		
+		button:hover {
+			color: blue;
+		}
+
+
+
+	</style>
+
+</head>
+<body>
+	
+	<div id="area_de_trabajo">
+		<button id="boton_click">Haz Click</button>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+	
+	<script>
+		$(document).ready(function(){
+
+			$('#boton_click').click(function(){
+				$('#area_de_trabajo').addClass('fondo_rojo ')
+			});
+
+		});
+	</script>
+
+</body>
+</html>
