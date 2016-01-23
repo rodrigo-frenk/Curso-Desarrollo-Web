@@ -1,13 +1,13 @@
 <?php 
 
 
-// Introducción a PHP
+
 
 // variables
 
 $un_numero = 3;
 
-$otro_numero = -4;
+$otro_numero = 4;
 
 // operador de suma:
 
@@ -30,11 +30,10 @@ $texto = $texto . "<br/>";
 
 $texto .= "<br/>";
 
-$texto .= "Segundo numero: " . $otro_numero;
+$texto .= " Segundo numero: " . $otro_numero;
 
 $texto .= "<br/>";
-
-$texto .= "Resultado: " . $suma;
+$texto .= " Resultado: " . $suma;
 
 $texto .= "<br/>";
 
@@ -59,28 +58,11 @@ if( $suma > 0 ) {
 }
 							// operadores de comparacion
 							// > mayor que
-							// < menor que
+							// > menor que
 							// >= mayor o igual que
 							// <= menor o igual que
 							// == igual que
 							// != diferente que 
-/*
-
-true o false:
-
-1 > 0 : true
-1 < 0 : false
-*/
-
-$condicion = true;
-
-if( $condicion ) {
-	echo "<br>";
-	echo "TRUE: ejecutar instrucciones";
-} else {
-	echo "<br>";
-	echo "FALSE: ejecutar otras instrucciones";
-}
 
 
 
@@ -106,7 +88,6 @@ function saluda() {
 	echo "</br>";
 	echo "Hola";
 }
-
 function despide() {
 	echo "</br>";
 	echo "Adios";
@@ -120,13 +101,7 @@ saluda();
 
 despide();
 
-
-
 // Función a la que se pasan datos (o argumentos, también llamados parámetros)
-
-// Esta función DEVUELVE un valor, es decir, nos arroja un dato con el que
-// podemos seguir trabajando.
-
 function suma_numeros( $a, $b ) {
 	return $a + $b;
 }
@@ -141,7 +116,6 @@ echo '<br/>';
 
 // reutilizando funciones dentro de funciones
 echo suma_numeros( suma_numeros( 1, 9 ), suma_numeros( 3, 2 ) );
-
 echo '<br/>';
 
 
