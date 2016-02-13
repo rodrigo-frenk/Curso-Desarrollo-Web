@@ -1,0 +1,56 @@
+Instalar Wordpress
+
+1. Arrancar servidor (MAMP)
+
+2. Descargar WP de es.wordpress.org
+
+3. Mover el archivo .zip descargdo del folder de Descargas (Downloads)
+   al folder público de MAMP (MAMP/htdocs)
+
+
+4. Extraer paquete en nuestro folder de preferencia, obteniendo un folder llamado wordpress
+
+
+5. Cambiar el nombre del folder de wordpress a "mi_blog" (sin espacios ni caracteres especiales)
+
+
+6. Navegar a localhost/mi_blog
+
+7. Navegar a localhost/phpMyAdmin
+   Crear DB "miblog"
+   ir a Privilegios/Privileges
+      -> nuevo usuario
+         nombre:miblog
+         servidor/host: localhost
+         contraseña:miblog
+
+
+
+8. Ingresar datos en WP
+
+8b. Quizás WP nos solicite crear el archivo wp-config.php con datos que nos entrega
+
+9. Ejecutar instalación de wordpress
+
+
+10. Listo! Ingresar a panel de control
+
+
+
+CREANDO UN THEME DE WORDPRESS
+
+
+
+1. Crear folder de theme en ruta/a/wordpress/wp-content/themes
+
+2. En ese folder, crear archivo style.css y functions.php
+
+3. En style.css añadir
+
+/*
+Theme Name: Nombre del tema
+*/
+
+
+4. Colocar imagen de tema en /ruta/a/wordpress/wp-content/themes/folder_tema/
+con el nombre screenshot.png
