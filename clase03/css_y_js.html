@@ -34,6 +34,57 @@
 		}
 
 
+		a {
+			color: green;
+		}
+
+		p {
+			color: #f0f;
+		}
+
+		.importante {
+			font-size:20px;
+		}
+
+		.no_tan_importante {
+			font-size: 13px;
+		}
+
+
+
+		#primer_parrafo {
+			font-size: 100px;
+		}
+		
+		#segundo_parrafo {
+			color: #0ff;
+		}
+
+
+
+		#ejemplo_jerarquia,
+		#ejemplo_jerarquia div {
+			border: 1px solid #0ef;
+			min-height: 50px;
+			padding: 20px;
+		}
+
+		#ejemplo_jerarquia > div {
+			border: 3px solid red;
+		}
+		#ejemplo_jerarquia > div div {
+			border: 3px dotted #faf;
+		}
+
+		#ejemplo_jerarquia > div > div {
+			border: 3px solid #fa0;
+		}
+
+
+		.mitad {
+			width: 40%;
+			display: inline-block;
+		}
 
 	</style>
 
@@ -46,12 +97,17 @@
 
 	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 	
-	<script>
+	<script type="text/javascript">
+
+
 		$(document).ready(function(){
 
+		
 			$('#boton_click').click(function(){
-				$('#area_de_trabajo').addClass('fondo_rojo ')
+				alert( "Hola!" )
+			// 	$('#area_de_trabajo').addClass('fondo_rojo ')
 			});
+
 
 		});
 	</script>

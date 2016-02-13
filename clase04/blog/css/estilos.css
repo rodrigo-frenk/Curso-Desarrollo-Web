@@ -1,0 +1,133 @@
+header,
+footer,
+section,
+div,
+li {
+	/*outline: 1px dotted #0af;*/
+}
+
+
+body {
+	background-color: #eee;
+	font-family: 'Open Sans', sans-serif;
+	overflow-y: hidden;
+}
+
+a {
+	color: #333;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height:100%;
+}
+
+.scrollH {
+	overflow-y: auto;
+}
+
+#header {
+	height:15vh;
+}
+
+.main {
+	height: 75vh;
+}
+
+#footer {
+	height: 10vh;
+}
+
+
+
+
+#blog {
+clear: both;
+}
+
+
+/* HOME */
+
+
+#home_imagen_fondo {
+	width: 100%;
+	height:75vh;
+
+	position: absolute;
+	z-index: -1;	
+}
+
+.cortina {
+/*
+	w100%
+	h100%
+	posa
+	t0
+	l0
+	zi0
+	op0.75
+	bgc
+*/
+
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	opacity: 0.75;
+	background-color: #fff;
+
+}
+
+
+#home_imagen_fondo img {
+	width: 100%;
+	height:75vh;
+}
+
+#home_titulo_texto {
+	width:50vw;
+	margin-left: 25vw;
+
+	height: 30vh;
+	margin-top: 22.5vh;
+	margin-bottom: 22.5vh;
+
+	text-align: center;
+}
+
+#home_titulo h1 {
+	font-size: 100px;
+	text-transform: uppercase;
+}
+
+
+img{
+	max-width:100%;
+}
+
+
+.entrada {
+	/*tac*/
+	text-align: center;
+}
+
+.entrada .contenido {
+	/*dn*/
+	display: none;
+}
+
+.entrada:hover .imagen {
+	/*db*/
+	display: none;
+}
+
+.entrada:hover .contenido {
+	/*db*/
+	display: block;
+}
+
+

@@ -1,0 +1,78 @@
+<!-- usando selector de identidad -->
+<!-- div se fabrica automáticamente cuando no especificamos etiqueta -->
+<!-- #caja_1 -->
+<div id="caja_1"></div>
+
+
+
+<!-- selector de clase -->
+<!-- .caja -->
+<div class="caja"></div>
+
+
+<!-- selector de id y de clase -->
+
+<!-- #caja_1.caja -->
+<div id="caja_1" class="caja"></div>
+
+
+<!-- varias clases -->
+
+<!-- #caja_1.caja.roja.grande.de_carton -->
+<div id="caja_1" class="caja roja grande de_carton"></div>
+
+
+
+<!-- especificando etiqueta -->
+<!-- ul#lista_1.lista -->
+<ul id="lista_1" class="lista"></ul>
+
+<!-- especificando jerarquia -->
+<!-- ul>li -->
+<ul>
+	<li></li>
+</ul>
+
+
+<!-- multiplicando elementos -->
+<!-- ul>li*3 -->
+<ul>
+	<li></li>
+	<li></li>
+	<li></li>
+</ul>
+
+
+<!-- metiendo contenidos -->
+<!-- ul>li{Contenido} -->
+<ul>
+	<li>Contenido</li>
+</ul>
+
+
+<!-- utilizando variables de repeticion -->
+<!-- ul>li{Hilera $}*3 -->
+<ul>
+	<li>Hilera 1</li>
+	<li>Hilera 2</li>
+	<li>Hilera 3</li>
+</ul>
+
+
+<!-- sumando elementos -->
+<!-- ul>(li>h1{Título $}+p{lorem12})*3 -->
+<ul>
+	<li>
+		<h1>Título 1</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda nihil quidem, alias.</p>
+	</li>
+	<li>
+		<h1>Título 2</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo laborum, quia blanditiis!</p>
+	</li>
+	<li>
+		<h1>Título 3</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima molestias sed, mollitia.</p>
+	</li>
+</ul>
+
