@@ -67,9 +67,9 @@ $sillas[11] = 'Andrea';
 
 for( $i = 0; $i < 12; $i++ ) {
 
-	echo "<br>";	
+	echo "<br>";
 	echo "En la silla " . ( $i + 1 );
-	
+
 	if( $sillas[ $i ] ) {
 		echo " esta sentada " . $sillas[ $i ];
 	} else {
@@ -78,17 +78,17 @@ for( $i = 0; $i < 12; $i++ ) {
 
 }
 
-	
+
 // estructura equivalente:
-echo "<br>";	
+echo "<br>";
 // otro tiṕo de bucle para repetir
 // una accion por cada elemento de un arreglo
 
 foreach( $sillas as $posicion => $nombre ) {
 
-	echo "<br>";	
+	echo "<br>";
 	echo "En la silla " . ($posicion + 1 );
-	
+
 	if( $nombre ) {
 		echo " esta sentada " . $nombre;
 	} else {
@@ -96,6 +96,7 @@ foreach( $sillas as $posicion => $nombre ) {
 	}
 
 }
+
 
 
 
