@@ -54,3 +54,5 @@ Theme Name: Nombre del tema
 
 4. Colocar imagen de tema en /ruta/a/wordpress/wp-content/themes/folder_tema/
 con el nombre screenshot.png
+
+5. Ver tema para conocer estructura mínima básica (en especial index.php, header.php, footer.php)
