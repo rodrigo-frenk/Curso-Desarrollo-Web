@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Feb 20, 2016 at 07:52 
+-- Generation Time: Feb 20, 2016 at 08:01 
 -- Server version: 5.5.36
 -- PHP Version: 5.4.27
 
@@ -19,6 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `miblog`
 --
+CREATE DATABASE IF NOT EXISTS `miblog` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `miblog`;
 
 -- --------------------------------------------------------
 
@@ -26,6 +28,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `mb_commentmeta`
 --
 
+DROP TABLE IF EXISTS `mb_commentmeta`;
 CREATE TABLE IF NOT EXISTS `mb_commentmeta` (
   `meta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `comment_id` bigint(20) unsigned NOT NULL DEFAULT '0',
@@ -42,6 +45,7 @@ CREATE TABLE IF NOT EXISTS `mb_commentmeta` (
 -- Table structure for table `mb_comments`
 --
 
+DROP TABLE IF EXISTS `mb_comments`;
 CREATE TABLE IF NOT EXISTS `mb_comments` (
   `comment_ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `comment_post_ID` bigint(20) unsigned NOT NULL DEFAULT '0',
@@ -79,6 +83,7 @@ INSERT INTO `mb_comments` (`comment_ID`, `comment_post_ID`, `comment_author`, `c
 -- Table structure for table `mb_links`
 --
 
+DROP TABLE IF EXISTS `mb_links`;
 CREATE TABLE IF NOT EXISTS `mb_links` (
   `link_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `link_url` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
@@ -103,6 +108,7 @@ CREATE TABLE IF NOT EXISTS `mb_links` (
 -- Table structure for table `mb_options`
 --
 
+DROP TABLE IF EXISTS `mb_options`;
 CREATE TABLE IF NOT EXISTS `mb_options` (
   `option_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `option_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
@@ -281,6 +287,7 @@ INSERT INTO `mb_options` (`option_id`, `option_name`, `option_value`, `autoload`
 -- Table structure for table `mb_postmeta`
 --
 
+DROP TABLE IF EXISTS `mb_postmeta`;
 CREATE TABLE IF NOT EXISTS `mb_postmeta` (
   `meta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `post_id` bigint(20) unsigned NOT NULL DEFAULT '0',
@@ -352,6 +359,7 @@ INSERT INTO `mb_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 -- Table structure for table `mb_posts`
 --
 
+DROP TABLE IF EXISTS `mb_posts`;
 CREATE TABLE IF NOT EXISTS `mb_posts` (
   `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `post_author` bigint(20) unsigned NOT NULL DEFAULT '0',
@@ -425,6 +433,7 @@ INSERT INTO `mb_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 -- Table structure for table `mb_termmeta`
 --
 
+DROP TABLE IF EXISTS `mb_termmeta`;
 CREATE TABLE IF NOT EXISTS `mb_termmeta` (
   `meta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `term_id` bigint(20) unsigned NOT NULL DEFAULT '0',
@@ -441,6 +450,7 @@ CREATE TABLE IF NOT EXISTS `mb_termmeta` (
 -- Table structure for table `mb_terms`
 --
 
+DROP TABLE IF EXISTS `mb_terms`;
 CREATE TABLE IF NOT EXISTS `mb_terms` (
   `term_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
@@ -465,6 +475,7 @@ INSERT INTO `mb_terms` (`term_id`, `name`, `slug`, `term_group`) VALUES
 -- Table structure for table `mb_term_relationships`
 --
 
+DROP TABLE IF EXISTS `mb_term_relationships`;
 CREATE TABLE IF NOT EXISTS `mb_term_relationships` (
   `object_id` bigint(20) unsigned NOT NULL DEFAULT '0',
   `term_taxonomy_id` bigint(20) unsigned NOT NULL DEFAULT '0',
@@ -498,6 +509,7 @@ INSERT INTO `mb_term_relationships` (`object_id`, `term_taxonomy_id`, `term_orde
 -- Table structure for table `mb_term_taxonomy`
 --
 
+DROP TABLE IF EXISTS `mb_term_taxonomy`;
 CREATE TABLE IF NOT EXISTS `mb_term_taxonomy` (
   `term_taxonomy_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `term_id` bigint(20) unsigned NOT NULL DEFAULT '0',
@@ -524,6 +536,7 @@ INSERT INTO `mb_term_taxonomy` (`term_taxonomy_id`, `term_id`, `taxonomy`, `desc
 -- Table structure for table `mb_usermeta`
 --
 
+DROP TABLE IF EXISTS `mb_usermeta`;
 CREATE TABLE IF NOT EXISTS `mb_usermeta` (
   `umeta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` bigint(20) unsigned NOT NULL DEFAULT '0',
@@ -565,6 +578,7 @@ INSERT INTO `mb_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 -- Table structure for table `mb_users`
 --
 
+DROP TABLE IF EXISTS `mb_users`;
 CREATE TABLE IF NOT EXISTS `mb_users` (
   `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `user_login` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
